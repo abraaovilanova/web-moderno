@@ -10,6 +10,7 @@ ao tamanho de seus lados. (Neste exemplo deve-se abstrair as condições matemá
 triângulo).
 */
 
+// Resolução Abraão
 function classificacaoTriangulo(a, b, c){
 
     if (b + c > a && a + c > b && a + b > c){
@@ -26,3 +27,18 @@ function classificacaoTriangulo(a, b, c){
 }
 
 classificacaoTriangulo(4,4,5)
+
+//Resolução Leo
+function classificaTriangulo (lado1, lado2, lado3) {
+    if(lado1 == lado2 && lado2 == lado3){
+        return 'Equilátero'
+    } else if (lado1 == lado2 || lado2 == lado3 || lado1 == lado3) {
+        return 'Isósceles'        
+    }else { 
+        return 'Escaleno'
+    }
+}
+
+console.log(classificaTriangulo(2, 2, 2));
+console.log(classificaTriangulo(2, 3, 3));
+console.log(classificaTriangulo(2, 3, 4));
